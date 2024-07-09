@@ -1,0 +1,79 @@
+h1 {
+    color: purple;
+}
+
+h1:hover{
+    background-color: aquamarine;
+}
+
+.text-color {
+    color: greenyellow;
+}
+
+.font-size {
+    font-size: 3rem;
+}
+
+#username {
+    background-color: blueviolet;
+}
+
+/* transformation */
+.box-1{
+    height:300px;
+    width:300px;
+    background-color: coral;
+    transform: rotate(45deg);
+}
+
+.box-2{
+    height:300px;
+    width:300px;
+    background-color: rgb(143, 47, 13);
+    transform: skew(30deg,20deg);
+}
+
+.box-3{
+    height:300px;
+    width:300px;
+    background-color: rgb(89, 35, 16);
+    transform: scale(2);
+}
+
+/* padding, border and margin */
+/* positions */
+.box-0{
+    height:300px;
+    width:300px;
+    background-color: rgb(18, 117, 139);
+    /* relative, absolute, fixed, sticky */
+    position:sticky;
+    top:0;
+    /* border-style:dotted;
+    border-width: 3px;
+    border-color: red; */
+    padding: 50px 60px 70px 80px;
+    margin: 100px 110px 120px 130px;
+}
+
+/* flexbox */
+.parent{
+    height:40vh;
+    background-color: blueviolet;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap:wrap;
+}
+
+.child{
+    height:150px;
+    width:200px;
+    background-color:orange;
+    border:solid black 1px;
+}
+
+/* transition */
+/* animation */
+
+/* media query */
