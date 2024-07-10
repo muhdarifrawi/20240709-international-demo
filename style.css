@@ -1,8 +1,12 @@
+html {
+    scroll-behavior: smooth;
+}
+
 h1 {
     color: purple;
 }
 
-h1:hover{
+h1:hover {
     background-color: aquamarine;
 }
 
@@ -19,36 +23,36 @@ h1:hover{
 }
 
 /* transformation */
-.box-1{
-    height:300px;
-    width:300px;
+.box-1 {
+    height: 300px;
+    width: 300px;
     background-color: coral;
     transform: rotate(45deg);
 }
 
-.box-2{
-    height:300px;
-    width:300px;
+.box-2 {
+    height: 300px;
+    width: 300px;
     background-color: rgb(143, 47, 13);
-    transform: skew(30deg,20deg);
+    transform: skew(30deg, 20deg);
 }
 
-.box-3{
-    height:300px;
-    width:300px;
+.box-3 {
+    height: 300px;
+    width: 300px;
     background-color: rgb(89, 35, 16);
     transform: scale(2);
 }
 
 /* padding, border and margin */
 /* positions */
-.box-0{
-    height:300px;
-    width:300px;
+.box-0 {
+    height: 300px;
+    width: 300px;
     background-color: rgb(18, 117, 139);
     /* relative, absolute, fixed, sticky */
-    position:sticky;
-    top:0;
+    position: sticky;
+    top: 0;
     /* border-style:dotted;
     border-width: 3px;
     border-color: red; */
@@ -57,23 +61,90 @@ h1:hover{
 }
 
 /* flexbox */
-.parent{
-    height:40vh;
+.parent {
+    height: 40vh;
     background-color: blueviolet;
-    display:flex;
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
 }
 
-.child{
-    height:150px;
-    width:200px;
-    background-color:orange;
-    border:solid black 1px;
+.child {
+    height: 150px;
+    width: 200px;
+    background-color: orange;
+    border: solid black 1px;
 }
+
+/* animation */
+.moving-box {
+    height: 150px;
+    width: 150px;
+    background-color: darkcyan;
+    position: relative;
+    animation-name: move-box;
+    animation-fill-mode: forwards;
+    animation-duration: 3s;
+    /* animation-timing-function: linear; */
+    animation-iteration-count: 3;
+}
+
+@keyframes move-box {
+    0% {
+        left: 0px;
+    }
+
+    100% {
+        left: 50vw;
+    }
+}
+
 
 /* transition */
-/* animation */
+.transit-box {
+    height: 150px;
+    width: 150px;
+    background-color: rgb(23, 62, 62);
+    transition-duration: 5s;
+    transition-property: height;
+}
+
+.transit-box:hover {
+    height: 350px;
+    width: 350px;
+    background-color: rgb(98, 120, 26);
+}
+
+
 
 /* media query */
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
+    .transit-box{
+        display:none;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    body {
+        background-color: rgb(21, 95, 119);
+    }
+    .transit-box{
+        display:block;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    body {
+        background-color: rgb(88, 21, 119);
+    }
+}
+
+@media only print{
+    h1{
+        display:none;
+    }
+}
